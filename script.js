@@ -50,7 +50,7 @@ const PRODUCTS = [
     colors: ["White", "Grey", "Navy"],
     stockStatus: "Tersedia",
     badge: "Bestseller",
-    images: ["/img/KainGreyTwill1.jpeg", "/img/KainGreyTwill2.jpeg"],
+    images: ["./img/KainGreyTwill1.jpeg", "./img/KainGreyTwill2.jpeg"],
   },
   {
     id: "p2",
@@ -67,7 +67,7 @@ const PRODUCTS = [
     colors: ["White", "Grey", "Navy"],
     stockStatus: "Tersedia",
     badge: "Pilihan Utama",
-    images: ["/img/KainGreyCanvas1.jpeg", "/img/KainGreyCanvas2.jpeg"],
+    images: ["./img/KainGreyCanvas1.jpeg", "./img/KainGreyCanvas2.jpeg"],
   },
 ];
 
