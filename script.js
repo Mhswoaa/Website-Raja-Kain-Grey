@@ -27,13 +27,11 @@ tailwind.config = {
   },
 };
 
-// ================= CONFIGURATION DATA =================
 const CONFIG = {
   whatsappNumber: "6285878752777",
   storeName: "Raja Kain Grey",
 };
 
-// Hanya 2 Kategori / Produk Utama: Grey Twill & Grey Canvas
 const PRODUCTS = [
   {
     id: "p1",
@@ -83,7 +81,6 @@ const getProductInquiryLink = (product) => {
   return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-// ================= APPLICATION STATE =================
 let currentProduct = null;
 let selectedColor = "";
 let selectedThickness = "";
@@ -96,7 +93,6 @@ let wishlist =
   JSON.parse(localStorage.getItem("raja_kain_grey_wishlist")) || [];
 let toastTimeout = null;
 
-// ================= TOAST HELPER =================
 // Custom Toast Helper (Menggantikan alert())
 function showToast(message) {
   const toast = document.getElementById("toast-notification");
@@ -112,7 +108,6 @@ function showToast(message) {
   }, 3500);
 }
 
-// ================= PRODUCT CARD & RENDERING =================
 // UI Generation: Create Product Card HTML
 function generateProductCard(product, context = "grid") {
   const isWishlisted = wishlist.includes(product.id);
@@ -187,7 +182,6 @@ function navigateAndFilter(category) {
   setFilter(category);
 }
 
-// ================= FILTER, SORT & SEARCH =================
 // Filter Function
 function setFilter(category) {
   currentFilterCategory = category;
@@ -290,7 +284,6 @@ function handleSearch(event) {
   }
 }
 
-// ================= WISHLIST =================
 // Wishlist Toggle (Local Storage)
 function toggleWishlist(event, productId) {
   event.stopPropagation();
@@ -379,7 +372,6 @@ function orderAllWishlist() {
   window.open(url, "_blank");
 }
 
-// ================= NAVIGATION & PRODUCT DETAIL =================
 // Navigation Function
 function navigate(viewId) {
   window.scrollTo(0, 0);
@@ -688,7 +680,6 @@ function renderProductDetail() {
   updateDetailState();
 }
 
-// ================= INFO MODAL LOGIC =================
 const INFO_CONTENT = {
   tentang: {
     title: "Tentang Kami",
@@ -727,7 +718,6 @@ function closeInfoModal() {
   document.body.style.overflow = "auto";
 }
 
-// ================= INITIALIZE =================
 window.addEventListener("DOMContentLoaded", () => {
   initRender();
 });
